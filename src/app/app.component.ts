@@ -12,12 +12,11 @@ export class AppComponent {
   includeSymbols = false;
   password = '';
 
-  onChangeLength(value: string){
-    //parse value to change from a string to a number//
-    const parsedValue = parseInt(value);
+  onChangeLength(value: any){
+    const parsedValue = parseInt(value.target.value);
 
-    if (!isNaN(parsedValue)) {
-      this.length = parsedValue;
+    if (!isNaN(parsedValue)){
+      this.length = parsedValue
     }
   }
 
@@ -57,7 +56,4 @@ export class AppComponent {
     this.password = generatedPassword;
   };
 
-  // getName() {
-  //   return 'Gerard';
-  // }
 }
